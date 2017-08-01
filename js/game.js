@@ -135,10 +135,10 @@ function show(Id){
 //generate question and multiple answers
 
 function generateQA(){
-    var x = 1+ Math.round(9*Math.random());
-    var y = 1+ Math.round(9*Math.random());
-    correctAnswer = x*y;
-    document.getElementById("question").innerHTML = x + "x" + y;
+    var x = 1+ Math.round(5*Math.random());
+    var y = 1+ Math.round(5*Math.random());
+    correctAnswer = x+y;
+    document.getElementById("question").innerHTML = x + "+" + y;
     var correctPosition = 1+ Math.round(3*Math.random());
     document.getElementById("box"+correctPosition).innerHTML = correctAnswer; //fill one box with the correct answer
 
