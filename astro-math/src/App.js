@@ -3,13 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import amlogo from './img/amlogo.svg';
 import Login from './components/login';
+import Game from './components/Game';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-         <Login />
+
+        <Game />
 
       </div>
     );
