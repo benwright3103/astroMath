@@ -1,77 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900');
+
 body{
-  background-image: url(img/spacebackground.svg) ;
-  min-height: 800px;
-
-
+  background-image: url(img/spacebackground.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
 }
 
 
-.App {
-  text-align: center;
+
+/*NavBar*/
+#navLogo{
+  width: 75px;
+}
+.navbar{
+  background: #F99947;
 }
 
+
+/*SignUp Form*/
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   min-height: 50px;
   max-height: 200px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-/*@keyframes App-logo-spin {
+@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}*/
-
-
-/*Login Component*/
-.login-form-main{
-  background: white;
-  border-radius: 5px;
-  width: 40%;
-  display: block;
-  margin: 20px  auto;
-
-
-
-
 }
 
 
-/*game component*/
+/*Game Container*/
 #container{
-    height: auto;
+    height: 400px;
     width: 550px;
-    background-color: #313851;
-    margin: 10px auto;
+    background-color: #9DD2EA;
+    margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
-    /*box-shadow: 0px 4px 0px 0px #009de4;
+    box-shadow: 0px 4px 0px 0px #009de4;
     -moz-box-shadow: 0px 4px 0px 0px #009de4;
-    -webkit-box-shadow: 0px 4px 0px 0px #009de4;*/
+    -webkit-box-shadow: 0px 4px 0px 0px #009de4;
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
 
 #score{
-    background-color: #F99947;
-    color: #FFF;
+    background-color: #F1FF92;
+    color: #888E5F;
     padding: 11px;
     position: absolute;
     left: 500px;
-    /*box-shadow: 0px 4px 0px #9da853;
+    box-shadow: 0px 4px 0px #9da853;
     -moz-box-shadow: 0px 4px 0px #9da853;
-    -webkit-box-shadow: 0px 4px 0px #9da853;*/
+    -webkit-box-shadow: 0px 4px 0px #9da853;
 }
 
 #correct{
@@ -96,10 +79,10 @@ body{
     width: 450px;
     height: 150px;
     margin: 50px auto 10px auto;
-    background-color: #DECC99;
-    /*box-shadow: 0px 4px #535aa8;
+    background-color: #9DA0EA;
+    box-shadow: 0px 4px #535aa8;
     -moz-box-shadow: 0px 4px #535aa8;
-    -webkit-box-shadow: 0px 4px #535aa8;*/
+    -webkit-box-shadow: 0px 4px #535aa8;
     font-size: 100px;
     text-align: center;
     font-family: cursive, sans-serif;
@@ -109,13 +92,13 @@ body{
 #instruction{
     width: 450px;
     height: 50px;
-    background-color: #E8BC25;
+    background-color: #B481D9;
     margin: 10px auto;
     text-align: center;
     line-height: 45px;
-    /*box-shadow: 0px 4px #8153a8;
+    box-shadow: 0px 4px #8153a8;
     -moz-box-shadow: 0px 4px #8153a8;
-    -webkit-box-shadow: 0px 4px #8153a8;*/
+    -webkit-box-shadow: 0px 4px #8153a8;
 }
 
 #choices{
