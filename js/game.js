@@ -150,7 +150,7 @@ function generateQA(){
         if(i != correctPosition) {
             var wrongAnswer;
             do{
-                wrongAnswer = (1+ Math.round(9*Math.random()))*(1+ Math.round(9*Math.random())); //a wrong answer
+                wrongAnswer = (1+ Math.round(5*Math.random()))*(1+ Math.round(5*Math.random())); //a wrong answer
             }while(answers.indexOf(wrongAnswer)>-1)
             document.getElementById("box"+i).innerHTML = wrongAnswer;
             answers.push(wrongAnswer);
