@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900');
 
-body{
-  background-image: url(img/spacebackground.svg);
+/*backgrounds*/
+
+
+#mainBody{
+  background-image: url(img/signupBackground.svg);
   background-repeat:no-repeat;
   background-size: cover;
   font-family: 'Orbitron', sans-serif;
 }
+
+#lvOneBody{
+  background-image: url(img/spacebackground.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif
+}
+
+
 
 
 
@@ -192,7 +204,7 @@ body{
 }
 
 .form {
-  background: #DECC99;
+  background: #00ac7a;
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;

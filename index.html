@@ -11,9 +11,11 @@
       <!-- Custom Styles  -->
       <link rel="stylesheet" href="main.css">
 
+      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
 
   </head>
-  <body>
+  <body id="mainBody" >
 
     <!-- Navbar -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -43,12 +45,12 @@
 
 
   <!-- Login/Signup -->
-   <div class="">
+   <!-- <div class="">
     <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
-  </div> -->
+  </div> --> -->
   <div class=" container form">
 
-    <img id="formLogo" class="mx-auto d-block" src="./img/mainLogoRocket.png" alt="">
+    <h1>Astro Math</h1>
 
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
@@ -81,17 +83,17 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input id="signupEmail" type="email"required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Set A Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input id="signupPass" type="password"required autocomplete="off"/>
           </div>
 
-          <button type="submit" class="button button-block"/>Get Started</button>
+          <button id="btnSignUp" class="button button-block"/>Get Started</button>
 
           </form>
 
@@ -106,19 +108,19 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input id="loginemail" type="email"required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input id="loginPass" type="password"required autocomplete="off"/>
           </div>
 
           <p class="forgot"><a href="#">Forgot Password?</a></p>
 
-          <button class="button button-block"/>Log In</button>
+          <button id="btnLogin" class="button button-block"/>Log In</button>
 
           </form>
 
@@ -145,6 +147,7 @@
 
 
 <script src="./js/main.js"></script>
+<script src="./js/auth.js"  ></script>
 
   </body>
 </html>
