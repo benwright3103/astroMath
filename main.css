@@ -14,7 +14,7 @@ body{
   width: 100px;
 }
 .navbar{
-  background: white;
+  background: #00ac7a;
 }
 
 
@@ -22,7 +22,7 @@ body{
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   min-height: 50px;
-  max-height: 200px;
+  max-height: 100px;
   margin-top: 10px;
 }
 @keyframes App-logo-spin {
@@ -186,6 +186,11 @@ body{
 
 
 /*login*/
+
+#formLogo{
+  width: 250px;
+}
+
 .form {
   background: #DECC99;
   padding: 40px;
@@ -278,7 +283,7 @@ input, textarea {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #313851;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
@@ -290,7 +295,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
-  border: 2px solid #a0b3b0;
+  border: 2px solid white;
   resize: vertical;
 }
 
@@ -315,12 +320,13 @@ textarea {
 
 .button {
   border: 0;
+  font-family: 'Orbitron', sans-serif;
   outline: none;
   border-radius: 0;
   padding: 15px 0;
   font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  /*font-weight: 600;*/
+  /*text-transform: uppercase;*/
   letter-spacing: .1em;
   background: #1ab188;
   color: #ffffff;
