@@ -19,129 +19,21 @@
   </head>
   <body id="mainBody" >
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Astro Math</a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mission Control</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign-In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-
-
-  <!-- Login/Signup -->
-   <!-- <div class="">
-    <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
-  </div> --> -->
-  <!-- <div class=" container form">
-
+<div class="container-fluid">
+  <div class="signupForm  mx-auto d-block">
     <h1>Astro Math</h1>
+    <p>Sign-up for a mission!</p>
+  <input class="mx-auto d-block" id="txtName" type="text" name="name" placeholder="name">
+  <input class="mx-auto d-block" id="txtEmail" type="email" name="email" placeholder="email">
 
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-      </ul>
+  <input class="mx-auto d-block" id="txtPassword" type="password" name="password" placeholder="password">
 
-      <div class="tab-content">
-        <div id="signup">
-          <h1>Sign Up for Free</h1>
+  <button id="btnLogin" class="btn btn-action ">Log-In</button>
+  <button id="btnSignUp" class="btn btn-secondary ">Sign-Up</button>
+  <!-- <button id="btnLogout" class="btn btn-action">Log-Out</button> -->
 
-          <form >
-
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input id="signupName" type="text" required autocomplete="off" />
-            </div>
-
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input id="signupEmail" type="email"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input id="signupPass" type="password"required autocomplete="off"/>
-          </div>
-
-          <button id="btnSignUp" onclick="handleSignUp()" class="button button-block"/>Sign Up</button>
-
-          </form>
-
-        </div>
-
-        <div id="login">
-          <h1>Welcome Back!</h1>
-
-          <form >
-
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input id="loginemail" type="email"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input id="loginPass" type="password"required autocomplete="off"/>
-          </div>
-
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-          <button id="btnLogin" class="button button-block"/>Log In</button>
-
-          </form>
-
-        </div>
-
-      </div><!-- tab-content -->
-
-<!-- </div> <!-- /form --> --> -->
-
-<div class="container">
-  <input id="txtEmail" type="email" name="email" placeholder="email">
-
-  <input id="txtPassword" type="password" name="password" placeholder="password">
-
-  <button id="btnLogin" class="btn btn-action">Log-In</button>
-  <button id="btnSignUp" class="btn btn-secondary">Sign-Up</button>
-  <button id="btnLogout" class="btn btn-action hide">Log-Out</button>
-
-
+</div>
 </div>
 
 

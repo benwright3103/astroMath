@@ -37,9 +37,8 @@
 /*SignUp Form*/
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  min-height: 50px;
-  max-height: 100px;
-  margin-top: 10px;
+  height: 150px;
+  margin-top: 20px;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -218,6 +217,32 @@
   background: #c0c5ce;
   height: 500px;
 }
+
+
+
+/*Login and Signup*/
+.signupForm{
+  background: #00ac7a;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+.signupForm h1, p{
+  text-align: center;
+  color: #313851;
+}
+
+.signupForm input{
+  width: 400px;
+  height: 40px;
+  margin-bottom: 5px;
+
+}
+.signupForm button{
+  display: inline;
+  margin: 0 auto;
+}
+
 
 /*login*/
 
