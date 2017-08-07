@@ -14,6 +14,8 @@
       <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 
 
+
+
   </head>
   <body id="mainBody" >
 
@@ -48,7 +50,7 @@
    <!-- <div class="">
     <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
   </div> --> -->
-  <div class=" container form">
+  <!-- <div class=" container form">
 
     <h1>Astro Math</h1>
 
@@ -61,14 +63,14 @@
         <div id="signup">
           <h1>Sign Up for Free</h1>
 
-          <form action="/" method="post">
+          <form >
 
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input id="signupName" type="text" required autocomplete="off" />
             </div>
 
             <div class="field-wrap">
@@ -93,7 +95,7 @@
             <input id="signupPass" type="password"required autocomplete="off"/>
           </div>
 
-          <button id="btnSignUp" class="button button-block"/>Get Started</button>
+          <button id="btnSignUp" onclick="handleSignUp()" class="button button-block"/>Sign Up</button>
 
           </form>
 
@@ -102,7 +104,7 @@
         <div id="login">
           <h1>Welcome Back!</h1>
 
-          <form action="/" method="post">
+          <form >
 
             <div class="field-wrap">
             <label>
@@ -128,7 +130,19 @@
 
       </div><!-- tab-content -->
 
-</div> <!-- /form -->
+<!-- </div> <!-- /form --> --> -->
+
+<div class="container">
+  <input id="txtEmail" type="email" name="email" placeholder="email">
+
+  <input id="txtPassword" type="password" name="password" placeholder="password">
+
+  <button id="btnLogin" class="btn btn-action">Log-In</button>
+  <button id="btnSignUp" class="btn btn-secondary">Sign-Up</button>
+  <button id="btnLogout" class="btn btn-action hide">Log-Out</button>
+
+
+</div>
 
 
 
@@ -146,8 +160,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
-<script src="./js/main.js"></script>
 <script src="./js/auth.js"  ></script>
+<script src="./js/main.js"></script>
+
 
   </body>
 </html>

@@ -199,7 +199,7 @@
 
 /*login*/
 
-#formLogo{
+/*#formLogo{
   width: 250px;
 }
 
@@ -212,7 +212,7 @@
   /*box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
 }
 
-.tab-group {
+/*.tab-group {
   list-style: none;
   padding: 0;
   margin: 0 0 40px 0;
@@ -221,8 +221,8 @@
   content: "";
   display: table;
   clear: both;
-}
-.tab-group li a {
+}*/
+/*.tab-group li a {
   display: block;
   text-decoration: none;
   padding: 15px;
@@ -235,17 +235,17 @@
   cursor: pointer;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-}
-.tab-group li a:hover {
+}*/
+/*.tab-group li a:hover {
   background: #179b77;
   color: #ffffff;
 }
 .tab-group .active a {
   background: #1ab188;
   color: #ffffff;
-}
+}*/
 
-.tab-content > div:last-child {
+/*.tab-content > div:last-child {
   display: none;
 }
 
@@ -254,9 +254,9 @@ h1 {
   color: #ffffff;
   font-weight: 300;
   margin: 0 0 40px;
-}
+}*/
 
-label {
+/*label {
   position: absolute;
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
@@ -285,9 +285,9 @@ label.active .req {
 
 label.highlight {
   color: #ffffff;
-}
+}*/
 
-input, textarea {
+/*input, textarea {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -300,8 +300,8 @@ input, textarea {
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
-}
-input:focus, textarea:focus {
+}*/
+/*input:focus, textarea:focus {
   outline: 0;
   border-color: #1ab188;
 }
@@ -309,9 +309,9 @@ input:focus, textarea:focus {
 textarea {
   border: 2px solid white;
   resize: vertical;
-}
+}*/
 
-.field-wrap {
+/*.field-wrap {
   position: relative;
   margin-bottom: 40px;
 }
@@ -325,8 +325,8 @@ textarea {
   float: left;
   width: 48%;
   margin-right: 4%;
-}
-.top-row > div:last-child {
+}*/
+/*.top-row > div:last-child {
   margin: 0;
 }
 
@@ -339,18 +339,18 @@ textarea {
   font-size: 2rem;
   /*font-weight: 600;*/
   /*text-transform: uppercase;*/
-  letter-spacing: .1em;
+  /*letter-spacing: .1em;
   background: #1ab188;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
-}
-.button:hover, .button:focus {
+}*/
+/*.button:hover, .button:focus {
   background: #179b77;
-}
+}*/
 
-.button-block {
+/*.button-block {
   display: block;
   width: 100%;
 }
@@ -358,4 +358,4 @@ textarea {
 .forgot {
   margin-top: -20px;
   text-align: right;
-}
+}*/
