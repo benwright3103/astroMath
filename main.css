@@ -16,6 +16,10 @@
   background-size: cover;
   font-family: 'Orbitron', sans-serif
 }
+#dashboardBody{
+  font-family: 'Orbitron', sans-serif
+
+}
 
 
 
@@ -55,10 +59,19 @@
     position: relative;
 }
 
+#leftDashboardHeader{
+  text-align: center;
+}
+
 #score{
-    background-color: #F7675C;
+    background-color: #313851;
     color: white;
-    width: 25%;
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
     padding: 10px;
 }
 
@@ -149,30 +162,28 @@
 }
 
 #startreset{
-    width: 78px;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.5);
-    margin: 0 auto;
-    border-radius: 3px;
-    cursor: pointer;
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    background-color: #F7675C;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
     text-align: center;
-    position: relative;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
+    padding: 10px;
+    cursor: pointer;
 }
 
 #timeremaining{
-    width: 152px;
-    padding: 10px;
-    position: inherit;
-    background-color: rgba(181, 235, 36, 0.8);
-    border-radius: 3px;
+  background-color: #F99947;
+  color: white;
+  width: 200px;
+  height: 70px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
 /*    visibility: hidden;*/
     display: none;
 }
@@ -180,22 +191,33 @@
 #gameOver{
     height: 200px;
     width: 500px;
-    background: linear-gradient(#F3CA6B, #F3706C);
-    background: -webkit-linear-gradient(#F3CA6B, #F3706C);
-    background: -o-linear-gradient(#F3CA6B, #F3706C);
-    background: -moz-linear-gradient(#F3CA6B, #F3706C);
     color: white;
     font-size: 2.5em;
     text-align: center;
     text-transform: uppercase;
-    position: absolute;
-    top: 100px;
-    left: 45px;
     z-index: 2;
     display: none;
 
 }
 
+
+
+/*Dashboard*/
+#leftDashboard{
+  background: #a7adba;
+  height: 500px;
+}
+
+#gameView{
+  background-image: url(img/spacebackground.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif
+}
+#dashboardFooter{
+  background: #c0c5ce;
+  height: 500px;
+}
 
 /*login*/
 
