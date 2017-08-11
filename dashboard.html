@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+      <!-- Custom Styles  -->
+      <link rel="stylesheet" href="main.css">
+
+      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+
+
+  </head>
+  <body id="dashboardBody" >
+
+    <div class="container-fluid">
+  <div class="row">
+    <div id="leftDashboard" class="col-md-3">
+      <div id="leftDashboardHeader" class="mx-auto d-block">
+        <h1>Hello Space Ranger, Ben!</h1>
+
+      </div>
+      <div class="mx-auto d-block" id="score">
+           Current Score: <span id="scorevalue">0</span>
+      </div>
+      <div class="mx-auto" id="timeremaining">
+          Time remaining: <span id="timeremainingvalue">60</span> sec
+      </div>
+      <div class="mx-auto d-block" id="startreset">
+          Start Game
+      </div>
+
+    </div>
+    <div id="gameView" class="col-md-9">
+      <div>
+
+             <div id="correct">
+                 Correct
+             </div>
+             <div id="wrong">
+                 Try again
+             </div>
+             <div id="question">
+
+             </div>
+
+
+             <div class="text-center" id="gameOver">
+
+             </div>
+         </div>
+
+
+    </div>
+  </div>
+  <div class="row" id="dashboardFooter">
+    <div  class="col-md-3">
+      <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
+    </div>
+    <div class="col-md-9 mx-auto">
+      <div id="instruction">
+          Click on the correct answer
+      </div>
+      <div id="choices">
+          <div id="box1" class="box"></div>
+          <div id="box2" class="box"></div>
+          <div id="box3" class="box"></div>
+          <div id="box4" class="box"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Game Script -->
+    <script src="js/game.js">
+
+    </script>
+  </body>
+</html>
