@@ -1,9 +1,27 @@
+(function() {
+
+  const config = {
+    apiKey: "AIzaSyC0Igx9Uo-ohIodwsNI-A5LC1Ri4EJ0rxo",
+    authDomain: "astromath-f0ec9.firebaseapp.com",
+    databaseURL: "https://astromath-f0ec9.firebaseio.com",
+    projectId: "astromath-f0ec9",
+    storageBucket: "astromath-f0ec9.appspot.com",
+    messagingSenderId: "679004195422"
+  };
+  firebase.initializeApp(config);
+
+  firebase.auth().onAuthStateChanged(firebaseUser =>{
+
+    if(firebaseUser){
+
+
 //javascript.js
 var playing = false;
 var score;
 var action;
 var timeremaining;
 var correctAnswer;
+var highScore= 0;
 
 //if we click on the start/reset
 document.getElementById("startreset").onclick = function(){
@@ -15,6 +33,19 @@ document.getElementById("startreset").onclick = function(){
         location.reload(); //reload page
 
     }else{//if we are not playing
+
+      var sound = new Howl({
+  src: ['sounds/Clock-Started.mp3'],
+  sprite: {
+    blast: [0, 3500],
+  }
+});
+
+// Shoot the laser!
+sound.play('blast');
+
+
+        console.log(sound)
 
         //change mode to playing
 
@@ -54,10 +85,16 @@ document.getElementById("startreset").onclick = function(){
 for(i=1; i<5; i++){
     document.getElementById("box"+i).onclick = function(){
     //check if we are playing
+
     if(playing == true){//yes
         if(this.innerHTML == correctAnswer){
         //correct answer
+        //play laser sound
+        var laser = new Howl({
+                  src: ['sounds/Laser-Ricochet2.mp3']
+                  });
 
+                  laser.play();
             //increase score by 1
             score++;
             document.getElementById("scorevalue").innerHTML = score;
@@ -68,11 +105,14 @@ for(i=1; i<5; i++){
                 hide("correct");
             }, 1000);
 
+
             //Generate new Q&A
 
             generateQA();
         }else{
         //wrong answer
+
+
             hide("correct");
             show("wrong");
             setTimeout(function(){
@@ -142,10 +182,57 @@ function generateQA(){
         if(i != correctPosition) {
             var wrongAnswer;
             do{
-                wrongAnswer = (1+ Math.round(5*Math.random()))*(1+ Math.round(5*Math.random())); //a wrong answer
+                wrongAnswer = (1+ Math.round(3*Math.random()))*(1+ Math.round(3*Math.random())); //a wrong answer
             }while(answers.indexOf(wrongAnswer)>-1)
             document.getElementById("box"+i).innerHTML = wrongAnswer;
             answers.push(wrongAnswer);
         }
     }
 }
+
+
+
+//Log Out Functionality For Dashboard
+
+
+
+
+//logout a user
+btnLogout.addEventListener('click', e =>{
+  firebase.auth().signOut();
+  location.href='file:///Users/benwright/Documents/bootcampProjects/astroMath/index.html?';
+
+
+});
+
+//add a realtime listenr
+
+
+    var query = firebase.database().ref("users").orderByKey();
+query.once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      // key will be "ada" the first time and "alan" the second time
+      var key = childSnapshot.key;
+      // childData will be the actual contents of the
+      if (firebaseUser.uid == key) {
+        var childData = childSnapshot.val();
+        console.log(childData)
+        document.getElementById("rangerName").innerHTML = childData.name;
+        document.getElementById("highScore").innerHTML = "High Score: " + childData.HighScore;
+      }
+
+
+  });
+
+});
+
+
+    console.log();
+  } else{
+    // location.href='file:///Users/benwright/Documents/bootcampProjects/astroMath/index.html?';
+    console.log('not logged in');
+  }
+});
+
+}());

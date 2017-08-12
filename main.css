@@ -37,8 +37,9 @@
 /*SignUp Form*/
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 150px;
+  height: 120px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -54,12 +55,13 @@
     margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
-/*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
 
 #leftDashboardHeader{
   text-align: center;
+  margin-top: 10px;
+  color: #313851;
 }
 
 #score{
@@ -76,8 +78,7 @@
 
 #correct{
     position: absolute;
-    left: 260px;
-    background-color: #42e252;
+    background-color: #00ac7a;
     color: white;
     padding: 11px;
     display: none;
@@ -85,7 +86,6 @@
 
 #wrong{
     position: absolute;
-    left: 250px;
     background-color: #de401a;
     color: white;
     padding: 11px;
@@ -95,8 +95,8 @@
 #question{
     width: 450px;
     height: 150px;
-    margin: 50px auto 10px auto;
-    background-color: #DECC99;
+    margin: 10px auto 10px auto;
+    background-color: white;
 
     font-size: 100px;
     text-align: center;
@@ -107,7 +107,7 @@
 #instruction{
     width: 450px;
     height: 50px;
-    background-color: #E8BC25;
+    background-color: #00ac7a;
     margin: 10px auto;
     text-align: center;
     line-height: 45px;
@@ -161,7 +161,7 @@
 }
 
 #startreset{
-    background-color: #F7675C;
+    background-color: #00ac7a;
     color: white;
     width: 200px;
     height: 50px;
@@ -189,7 +189,8 @@
 
 #gameOver{
     height: 200px;
-    width: 500px;
+    width: 400px;
+    background: #F99947;
     color: white;
     font-size: 2.5em;
     text-align: center;
@@ -203,9 +204,21 @@
 
 /*Dashboard*/
 #leftDashboard{
-  background: #a7adba;
-  height: 500px;
+  background: #DECC99;
+  min-height: 700px;
 }
+hr{
+  margin-top: 30px;
+  background: #00ac7a;
+  height: 2px;
+}
+#leftDashboard ul{
+  margin-top: 50px;
+  list-style: none;
+  font-size: 1em;
+  color: #313851;
+}
+
 
 #gameView{
   background-image: url(img/spacebackground.svg);
@@ -213,10 +226,21 @@
   background-size: cover;
   font-family: 'Orbitron', sans-serif
 }
-#dashboardFooter{
-  background: #c0c5ce;
-  height: 500px;
+
+#btnLogout{
+  background-color: #F7675C;
+  color: white;
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
 }
+
 
 
 
@@ -225,6 +249,7 @@
   background: #00ac7a;
   padding: 40px;
   max-width: 600px;
+  min-height: 350px;
   margin: 40px auto;
 }
 .signupForm h1, p{
@@ -242,167 +267,7 @@
   display: inline;
   margin: 0 auto;
 }
+.buttons{
+  margin-right: 55px;
 
-
-/*login*/
-
-/*#formLogo{
-  width: 250px;
 }
-
-.form {
-  background: #00ac7a;
-  padding: 40px;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 4px;
-  /*box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
-}
-
-/*.tab-group {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px 0;
-}
-.tab-group:after {
-  content: "";
-  display: table;
-  clear: both;
-}*/
-/*.tab-group li a {
-  display: block;
-  text-decoration: none;
-  padding: 15px;
-  background: #313851;
-  color: #a0b3b0;
-  font-size: 20px;
-  float: left;
-  width: 50%;
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}*/
-/*.tab-group li a:hover {
-  background: #179b77;
-  color: #ffffff;
-}
-.tab-group .active a {
-  background: #1ab188;
-  color: #ffffff;
-}*/
-
-/*.tab-content > div:last-child {
-  display: none;
-}
-
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-weight: 300;
-  margin: 0 0 40px;
-}*/
-
-/*label {
-  position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  left: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size: 22px;
-}
-label .req {
-  margin: 2px;
-  color: #1ab188;
-}
-
-label.active {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  left: 2px;
-  font-size: 14px;
-}
-label.active .req {
-  opacity: 0;
-}
-
-label.highlight {
-  color: #ffffff;
-}*/
-
-/*input, textarea {
-  font-size: 22px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #313851;
-  color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
-}*/
-/*input:focus, textarea:focus {
-  outline: 0;
-  border-color: #1ab188;
-}
-
-textarea {
-  border: 2px solid white;
-  resize: vertical;
-}*/
-
-/*.field-wrap {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.top-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.top-row > div {
-  float: left;
-  width: 48%;
-  margin-right: 4%;
-}*/
-/*.top-row > div:last-child {
-  margin: 0;
-}
-
-.button {
-  border: 0;
-  font-family: 'Orbitron', sans-serif;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  font-size: 2rem;
-  /*font-weight: 600;*/
-  /*text-transform: uppercase;*/
-  /*letter-spacing: .1em;
-  background: #1ab188;
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
-}*/
-/*.button:hover, .button:focus {
-  background: #179b77;
-}*/
-
-/*.button-block {
-  display: block;
-  width: 100%;
-}
-
-.forgot {
-  margin-top: -20px;
-  text-align: right;
-}*/

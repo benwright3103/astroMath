@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="main.css">
 
       <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
+
 
 
 
@@ -21,8 +23,11 @@
     <div class="container-fluid">
   <div class="row">
     <div id="leftDashboard" class="col-md-3">
+      <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
       <div id="leftDashboardHeader" class="mx-auto d-block">
-        <h1>Hello Space Ranger, Ben!</h1>
+        <h1>Space Ranger</h1>
+        <h1 id="rangerName"></h1>
+        <hr>
 
       </div>
       <div class="mx-auto d-block" id="score">
@@ -32,12 +37,21 @@
           Time remaining: <span id="timeremainingvalue">60</span> sec
       </div>
       <div class="mx-auto d-block" id="startreset">
+        <audio id="audio" src="sounds/Power_Up_Ray.mp3" ></audio>
           Start Game
       </div>
+      <hr>
 
+      <ul> <h2>Mission Stats</h2>
+        <li id="highScore"></li>
+        <li>Last Missed:</li>
+        <li>Current Planet:Addition Asteroid</li>
+        <li>Mission Status: Active</li>
+      </ul>
+        <button id="btnLogout" class="btn btn-action mx-auto d-block">Log-Out</button>
     </div>
-    <div id="gameView" class="col-md-9">
-      <div>
+    <div id="gameView"  class="col-md-9">
+      <div id="container">
 
              <div id="correct">
                  Correct
@@ -48,30 +62,24 @@
              <div id="question">
 
              </div>
+             <div id="instruction">
+                 Click on the correct answer
+             </div>
+             <div id="choices">
+                 <div id="box1" class="box"></div>
+                 <div id="box2" class="box"></div>
+                 <div id="box3" class="box"></div>
+                 <div id="box4" class="box"></div>
+             </div>
 
 
-             <div class="text-center" id="gameOver">
+             <div class="text-center mx-auto" id="gameOver">
 
              </div>
+
          </div>
 
 
-    </div>
-  </div>
-  <div class="row" id="dashboardFooter">
-    <div  class="col-md-3">
-      <img class="App-logo mx-auto d-block" src="./img/spinLogo.png" alt="">
-    </div>
-    <div class="col-md-9 mx-auto">
-      <div id="instruction">
-          Click on the correct answer
-      </div>
-      <div id="choices">
-          <div id="box1" class="box"></div>
-          <div id="box2" class="box"></div>
-          <div id="box3" class="box"></div>
-          <div id="box4" class="box"></div>
-      </div>
     </div>
   </div>
 </div>
@@ -90,8 +98,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <!-- Game Script -->
-    <script src="js/game.js">
-
-    </script>
+    <script src="js/game.js"></script>
   </body>
 </html>
