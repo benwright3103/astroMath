@@ -200,7 +200,7 @@ function generateQA(){
 //logout a user
 btnLogout.addEventListener('click', e =>{
   firebase.auth().signOut();
-  location.href='file:///Users/benwright/Documents/bootcampProjects/astroMath/index.html?';
+  location.href='file:///Users/blake/Projects/80KBV/parker-marie/astromath/index.html';
 
 
 });

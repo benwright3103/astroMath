@@ -264,12 +264,8 @@ hr{
 
 }
 
-
-
-
-/*Login and Signup*/
 .signupForm{
-  background: #00ac7a;
+  background: #313851;
   padding: 40px;
   max-width: 600px;
   min-height: 350px;
@@ -277,7 +273,7 @@ hr{
 }
 .signupForm h1, p{
   text-align: center;
-  color: #313851;
+  color: #00ac7a;
 }
 
 .signupForm input{
