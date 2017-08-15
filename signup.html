@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,14 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-      <!-- Custom Styles  -->
-      <link rel="stylesheet" href="main.css">
+    <!-- Custom Styles  -->
+    <link rel="stylesheet" href="main.css">
 
-      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-  </head>
-  <body id="mainBody" >
-
-
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+</head>
+<body id="mainBody" >
 <div class="container-fluid">
 <div class="row">
   <div class="col">
@@ -25,22 +23,19 @@
 
   <div class="signupForm  mx-auto d-block">
     <h1>Astro Math</h1>
-    <p>Login, We Need You!</p>
+    <p>Sign-up for a mission!</p>
+    <input class="mx-auto d-block" id="txtName" type="text" name="name" placeholder="name">
     <input class="mx-auto d-block" id="txtEmail" type="email" name="email" placeholder="email">
+
     <input class="mx-auto d-block" id="txtPassword" type="password" name="password" placeholder="password">
+    <input class="mx-auto d-block" id="txtClassId" type="id" name="classId" placeholder="class id">
+    <br>
     <div class="buttons float-right">
-      <a href="signup.html"><button id="btnSignin" class="btn signup">Sign-Up!</button></a>
-      <button id="btnLogin" class="btn btn-secondary">Log-In</button>
+    <a href="index.html"><button id="btnSignin" class="btn signup">Back</button></a>
+    <button id="btnSignUp" class="btn btn-secondary">Sign-Up</button>
     </div>
+    <br>
   </div>
-
-</div>
-
-
-
-
-
-
 <!-- Custom JS -->
 
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -50,10 +45,7 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-
-<script src="./js/login.js"  ></script>
-
-
+  <script src="./js/signup.js"  ></script>
+  </div>
   </body>
 </html>

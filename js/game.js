@@ -200,32 +200,46 @@ function generateQA(){
 //logout a user
 btnLogout.addEventListener('click', e =>{
   firebase.auth().signOut();
-  location.href='file:///Users/benwright/Documents/bootcampProjects/astroMath/index.html?';
-
-
+  location.href='file:///Users/blake/Projects/80KBV/parker-marie/astroMath/index.html';
 });
 
+var classId = '';
 //add a realtime listenr
-
-
-    var query = firebase.database().ref("users").orderByKey();
-query.once("value")
-  .then(function(snapshot) {
+var queryy = firebase.database().ref("users/").orderByKey();
+    queryy.once("value")
+    .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       // key will be "ada" the first time and "alan" the second time
       var key = childSnapshot.key;
       // childData will be the actual contents of the
-      if (firebaseUser.uid == key) {
-        var childData = childSnapshot.val();
-        console.log(childData)
-        document.getElementById("rangerName").innerHTML = childData.name;
-        document.getElementById("highScore").innerHTML = "High Score: " + childData.HighScore;
-      }
+          if (firebaseUser.uid == key) {
+            var childData = childSnapshot.val();
+            classId = childData.classId;
+            console.log(classId);
+          }
+        });
 
 
-  });
+    var query = firebase.database().ref("students/"+classId+"/").orderByKey();
+    query.once("value")
+    .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      // key will be "ada" the first time and "alan" the second time
+      var key = childSnapshot.key;
+      // childData will be the actual contents of the
+          console.log(classId);
+          if (firebaseUser.uid == key) {
+            var childData = childSnapshot.val();
+            console.log(childData)
+            document.getElementById("rangerName").innerHTML = childData.name;
+            document.getElementById("highScore").innerHTML = "High Score: " + childData.asteroidHS;
+          }
+        });
+    });
 
-});
+    });
+
+
 
 
     console.log();

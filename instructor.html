@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <!-- Custom Styles  -->
+      <link rel="stylesheet" href="instructor.css">
+      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  </head>
+  <body id="mainBody" >
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+        <a href="./index.html"><button type="button" class="btn btn-primary float-right"" data-toggle="modal" data-target="#exampleModal">Student Sign-In</button></a>
+    </div>
+  </div>
+  <div class="signupForm  mx-auto d-block">
+    <h1>Astro Math</h1>
+    <p>Login for a class overview!</p>
+    <input class="mx-auto d-block" id="txtEmail" type="email" name="email" placeholder="email">
+    <input class="mx-auto d-block" id="txtPassword" type="password" name="password" placeholder="password">
+    <div class="buttons float-right">
+      <a href="instSignup.html"><button id="btnSignin" class="btn signup">Sign-Up!</button></a>
+      <button id="btnLogin" class="btn btn-secondary">Log-In</button>
+    </div>
+  </div>
+
+
+
+
+<!-- Custom JS -->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script src="./js/instAuth.js"  ></script>
+
+
+  </body>
+</html>

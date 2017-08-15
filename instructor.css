@@ -10,16 +10,6 @@
   font-family: 'Orbitron', sans-serif;
 }
 
-.signup{
-  background-color: transparent;
-  color: white
-}
-
-.signup:hover{
-  color: #313851
-}
-}
-
 #lvOneBody{
   background-image: url(img/spacebackground.svg);
   background-repeat:no-repeat;
@@ -31,6 +21,15 @@
 
 }
 
+.signup{
+  background: transparent;
+  color: white;
+}
+
+.signup:hover{
+  color: #00ac7a;
+}
+
 .btn-primary{
   background-color: #00ac7a;
   border-color: transparent;
@@ -38,6 +37,24 @@
 .btn-primary:hover{
   border-color: #00ac7a;
   background-color: #313851;
+}
+
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
 }
 
 /*NavBar*/
@@ -256,21 +273,16 @@ hr{
 
 }
 
-
-
-
-/*Login and Signup*/
 .signupForm{
-  background: #00ac7a;
+  background: #313851;
   padding: 40px;
   max-width: 600px;
   min-height: 350px;
   margin: 40px auto;
-  color: #313851;
 }
 .signupForm h1, p{
   text-align: center;
-  color: #313851;
+  color: #00ac7a;
 }
 
 .signupForm input{
