@@ -142,6 +142,13 @@ function startCountdown(){
             hide("wrong");
             playing = false;
             document.getElementById("startreset").innerHTML = "Start Game";
+            if (score > asteroidHS){
+                firebase.database().ref('students/'+ classId +'/' + firebaseUser.uid).update({
+                  asteroidHS: score
+                });
+                asteroidHS = score;
+                document.getElementById("highScore").innerHTML = "High Score: " + asteroidHS;
+            }
         }
     }, 1000);
 }
@@ -167,8 +174,8 @@ function show(Id){
 //generate question and multiple answers
 
 function generateQA(){
-    var x = 1+ Math.round(5*Math.random());
-    var y = 1+ Math.round(5*Math.random());
+    var x = 0+ Math.round(6*Math.random());
+    var y = 0+ Math.round(6*Math.random());
     correctAnswer = x+y;
     document.getElementById("question").innerHTML = x + "+" + y;
     var correctPosition = 1+ Math.round(3*Math.random());
@@ -204,6 +211,7 @@ btnLogout.addEventListener('click', e =>{
 });
 
 var classId = '';
+var asteroidHS = 0;
 //add a realtime listenr
 var queryy = firebase.database().ref("users/").orderByKey();
     queryy.once("value")
@@ -233,6 +241,7 @@ var queryy = firebase.database().ref("users/").orderByKey();
             console.log(childData)
             document.getElementById("rangerName").innerHTML = childData.name;
             document.getElementById("highScore").innerHTML = "High Score: " + childData.asteroidHS;
+            asteroidHS = childData.asteroidHS;
           }
         });
     });
