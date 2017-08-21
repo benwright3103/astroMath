@@ -8,6 +8,16 @@
     messagingSenderId: "679004195422"
   };
   firebase.initializeApp(config);
+
+  app.controller("Ctrl", function($scope, $firebaseObject) {
+	  
+	  var ref = new Firebase("https://astromath-f0ec9.firebaseio.com/students/fall2017");
+	  // download the data into a local object
+	  $scope.newClass = $firebaseArray(ref);
+	
+	});
+  
+
   var classID = 'fall2017';
   var query = firebase.database().ref("students/"+classID+'/').orderByKey();
     query.once("value")
@@ -17,6 +27,7 @@
       var key = childSnapshot.key;
       // childData will be the actual contents of the
 
+    });
     });
 
 }());
