@@ -245,11 +245,7 @@ var queryy = firebase.database().ref("users/").orderByKey();
     });
 
     });
-
-
-
-
-    console.log();
+    
   } else{
     location.href='file:///Users/blake/Projects/80KBV/parker-marie/astroMath/index.html';
     console.log('not logged in');

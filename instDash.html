@@ -39,8 +39,10 @@
           <button type="button" class="btn btn-outline">Logout</button>
         </div>
       </div>
-      <div class="row" ng-controller="Ctrl">
-        <p ng-repeat="student in newClass">{{student.name}}</p>
+      <div ng-app="app" ng-controller="MyCtrl">
+          <ul>
+              <li ng-repeat="(name, data) in items">{{name}}: {{data.age}} - {{data.fav}}</li>
+          </ul>
       </div>
     </div>
   </div>
