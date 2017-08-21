@@ -9,9 +9,7 @@
     messagingSenderId: "679004195422"
   };
   firebase.initializeApp(config);
-
   firebase.auth().onAuthStateChanged(firebaseUser =>{
-
     if(firebaseUser){
 
 
@@ -136,19 +134,22 @@ function startCountdown(){
         if(timeremaining == 0){// game over
             stopCountdown();
             show("gameOver");
-         document.getElementById("gameOver").innerHTML = "<p>Game over!</p><p>Your score is " + score + ".</p>";
-            hide("timeremaining");
-            hide("correct");
-            hide("wrong");
-            playing = false;
-            document.getElementById("startreset").innerHTML = "Start Game";
             if (score > asteroidHS){
                 firebase.database().ref('students/'+ classId +'/' + firebaseUser.uid).update({
                   asteroidHS: score
                 });
                 asteroidHS = score;
                 document.getElementById("highScore").innerHTML = "High Score: " + asteroidHS;
+                document.getElementById("gameOver").innerHTML = "<p>New High Score!</p><p>Your score is " + score + "!</p>";
             }
+            else{
+                document.getElementById("gameOver").innerHTML = "<p>Game over!</p><p>Your score is " + score + ".</p>";
+            }   
+            hide("timeremaining");
+            hide("correct");
+            hide("wrong");
+            playing = false;
+            document.getElementById("startreset").innerHTML = "Start Game";
         }
     }, 1000);
 }
@@ -223,7 +224,6 @@ var queryy = firebase.database().ref("users/").orderByKey();
           if (firebaseUser.uid == key) {
             var childData = childSnapshot.val();
             classId = childData.classId;
-            console.log(classId);
           }
         });
 
@@ -235,10 +235,8 @@ var queryy = firebase.database().ref("users/").orderByKey();
       // key will be "ada" the first time and "alan" the second time
       var key = childSnapshot.key;
       // childData will be the actual contents of the
-          console.log(classId);
           if (firebaseUser.uid == key) {
             var childData = childSnapshot.val();
-            console.log(childData)
             document.getElementById("rangerName").innerHTML = childData.name;
             document.getElementById("highScore").innerHTML = "High Score: " + childData.asteroidHS;
             asteroidHS = childData.asteroidHS;
@@ -253,7 +251,7 @@ var queryy = firebase.database().ref("users/").orderByKey();
 
     console.log();
   } else{
-    // location.href='file:///Users/benwright/Documents/bootcampProjects/astroMath/index.html?';
+    location.href='file:///Users/blake/Projects/80KBV/parker-marie/astroMath/index.html';
     console.log('not logged in');
   }
 });

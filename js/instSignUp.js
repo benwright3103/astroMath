@@ -17,37 +17,37 @@ const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 const txtName = document.getElementById('txtName');
 //add login event
-btnLogin.addEventListener('click', e =>{
-  //Get Email and Pass
-  const email = txtEmail.value;
-  const pass =  txtPassword.value;
-  const auth = firebase.auth();
-  //Sign in
-  const promise = auth.signInWithEmailAndPassword(email, pass);
-  promise.then(user =>{
-    location.href='file:///Users/blake/Projects/80KBV/parker-marie/astromath/dashboard.html';
-  });
-  promise.catch(e =>
-    console.log(e.message)
-  );
-});
+
+
 btnSignUp.addEventListener('click', e =>{
   //Get Email and Pass
   const name  = txtName.value;
   const email = txtEmail.value;
   const pass =  txtPassword.value;
+  const vCode = txtVCode.value;
   const auth = firebase.auth();
   //Sign Up
-  const promise = auth.createUserWithEmailAndPassword(email, pass);
-  promise
-  .then(user =>{
-    firebase.database().ref('instructors/'+user.uid).set({
-      email:user.email,
-      name: name,
-      isStudent: false
+  if(vCode == 'code'){
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise
+    .then(user =>{
+      firebase.database().ref('instructors/'+user.uid).set({
+        email:user.email,
+        name: name,
+        isStudent: false,
+        classes: {
+          empty: true
+        }
+      });
     });
-    });
-  promise.catch(e => console.log(e.message));
+    location.replace('file:///Users/blake/Projects/80KBV/parker-marie/astroMath/instructor.html');
+    promise.catch(e => console.log(e.message));
+
+  }
+  else{
+    alert('Verification code is not valid');
+  }
+    
 });
 //logout a user
 // btnLogout.addEventListener('click', e =>{

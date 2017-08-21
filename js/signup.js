@@ -50,6 +50,7 @@ btnSignUp.addEventListener('click', e =>{
 firebase.auth().onAuthStateChanged(firebaseUser =>{
   if(firebaseUser){
     console.log(firebaseUser);
+    location.href('file:///Users/blake/Projects/80KBV/parker-marie/astroMath/index.html');
   } else{
     console.log('not logged in');
   }
