@@ -9,7 +9,6 @@
   };
   firebase.initializeApp(config);
 //Get Elements
-const vCode = document.getElementById('vCode');
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
@@ -17,39 +16,27 @@ const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 const txtName = document.getElementById('txtName');
 //add login event
-
-
-btnSignUp.addEventListener('click', e =>{
+btnLogin.addEventListener('click', e =>{
   //Get Email and Pass
-  const name  = txtName.value;
   const email = txtEmail.value;
   const pass =  txtPassword.value;
-  const vCode = txtVCode.value;
   const auth = firebase.auth();
-  //Sign Up
-  if(vCode == 'code'){
-    const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise
-    .then(user =>{
-      firebase.database().ref('instructors/'+user.uid).set({
-        email:user.email,
-        name: name,
-        isStudent: false,
-        classes: {
-          empty: true
-        }
-      });
-    });
-    location.replace('file:///Users/blake/Projects/80KBV/parker-marie/astroMath/instructor.html');
-    promise.catch(e => console.log(e.message));
-
-  }
-  else{
-    alert('Verification code is not valid');
-  }
-    
+  //Sign in
+  const promise = auth.signInWithEmailAndPassword(email, pass);
+  promise.then(user =>{
+    location.href='file:///Users/blake/Projects/80KBV/parker-marie/astromath/instDash.html';
+  });
+  promise.catch(e =>
+    console.log(e.message)
+  );
 });
-
+//logout a user
+// btnLogout.addEventListener('click', e =>{
+//   firebase.auth().signOut();
+//
+//
+// });
+//add a realtime listenr
 firebase.auth().onAuthStateChanged(firebaseUser =>{
   if(firebaseUser){
     console.log(firebaseUser);

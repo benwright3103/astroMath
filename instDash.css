@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900');
+
+/*backgrounds*/
+
+
+
+/*Game Container*/
+#container{
+    height: auto;
+    width: 50%;
+    background-color: #313851;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+h1{
+  color: #DECC99;
+  padding: 20px;
+}
+button{
+  margin: 20px;
+  padding: 20px;
+  width: 70%;
+}
+
+.btn-outline{
+  background: #ffffff;
+  color: #313851;;
+}
+
+.btn-primary{
+  background: #313851;
+  border-color: transparent;
+}
+
+
+/*Dashboard*/
+#bottomDashboard{
+  background: #DECC99;
+  min-height: 700px;
+}
+
+
+
+#gameView{
+  background-image: url(img/spacebackground.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif
+}
